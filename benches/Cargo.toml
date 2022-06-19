@@ -9,6 +9,8 @@ tokio = { version = "1.5.0", path = "../tokio", features = ["full"] }
 bencher = "0.1.5"
 
 [dev-dependencies]
+bytes = "1.1.0"
+futures = "0.3.21"
 tokio-util = { version = "0.7.0", path = "../tokio-util", features = ["full"] }
 tokio-stream = { path = "../tokio-stream" }
 
@@ -49,4 +51,9 @@ harness = false
 [[bench]]
 name = "fs"
 path = "fs.rs"
+harness = false
+
+[[bench]]
+name = "codec_framedwrite"
+path = "codec_framedwrite.rs"
 harness = false
